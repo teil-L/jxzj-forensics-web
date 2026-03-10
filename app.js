@@ -224,7 +224,7 @@ createApp({
 
     const downloadPDF = () => {
       if (window.location.protocol === 'file:') {
-        alert("当前以 file:// 打开，浏览器会拦截 PDF 截图导出。\n请先运行 start_demo.bat，然后用 http://8.136.210.90:8000/index.html 打开页面再导出。");
+        alert("当前以 file:// 打开，浏览器会拦截 PDF 截图导出。\n请先运行 start_demo.bat，然后用 http://www.jxzj-tech.cn:8000/index.html 打开页面再导出。");
         return;
       }
 
@@ -264,7 +264,7 @@ createApp({
     };
 
     const captureEvidenceSnapshot = async () => {
-      const snapshotUrl = `http://8.136.210.90/snapshot?t=${Date.now()}`;
+      const snapshotUrl = `http://www.jxzj-tech.cn/snapshot?t=${Date.now()}`;
       try {
         const resp = await fetch(snapshotUrl, { cache: 'no-store' });
         const contentType = resp.headers.get('content-type') || '';
@@ -375,3 +375,4 @@ createApp({
 
   }
 }).mount('#app');
+
