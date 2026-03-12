@@ -264,7 +264,7 @@ createApp({
     };
 
     const captureEvidenceSnapshot = async () => {
-      const snapshotUrl = `http://127.0.0.1:5000/snapshot?t=${Date.now()}`;
+      const snapshotUrl = `http://api.jxzj-tech.cn/snapshot?t=${Date.now()}`;
       try {
         const resp = await fetch(snapshotUrl, { cache: 'no-store' });
         const contentType = resp.headers.get('content-type') || '';
@@ -374,3 +374,4 @@ createApp({
     };
   }
 }).mount('#app');
+
