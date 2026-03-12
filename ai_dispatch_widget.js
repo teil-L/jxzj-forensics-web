@@ -83,7 +83,7 @@
   async function requestSuggestion() {
     setLoading(true);
     try {
-      var resp = await fetch("http://127.0.0.1:5000/api/dispatch-suggestion", {
+      var resp = await fetch("http://api.jxzj-tech.cn/api/dispatch-suggestion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
