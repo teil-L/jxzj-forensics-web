@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://你的阿里云ECS公网IP:端口/:path*"
+    }
+  ]
+}
