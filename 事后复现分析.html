@@ -331,7 +331,7 @@
                             @pause="isPlaying = false"
                             @error="handleAnalysisVideoError"></video>
                         <img v-else
-                            src="http://127.0.0.1:5000/video_feed"
+                            src="http://api.jxzj-tech.cn/video_feed"
                             class="w-full h-full object-cover opacity-75 absolute inset-0"
                             alt="实时推理回退视频流">
 
@@ -705,7 +705,7 @@
                 };
 
                 const captureReportEvidence = async () => {
-                    const snapshotUrl = `http://127.0.0.1:5000/snapshot?t=${Date.now()}`;
+                    const snapshotUrl = `http://api.jxzj-tech.cn/snapshot?t=${Date.now()}`;
                     try {
                         const resp = await fetch(snapshotUrl, { cache: 'no-store' });
                         const contentType = resp.headers.get('content-type') || '';
@@ -736,7 +736,7 @@
                         const eventText = records.value[activeRecord.value]
                             ? `${records.value[activeRecord.value].title} / ${records.value[activeRecord.value].tag}`
                             : "取证复盘场景";
-                        const resp = await fetch("http://127.0.0.1:5000/api/dispatch-suggestion", {
+                        const resp = await fetch("http://api.jxzj-tech.cn/api/dispatch-suggestion", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
@@ -946,6 +946,7 @@
 </body>
 
 </html>
+
 
 
 
