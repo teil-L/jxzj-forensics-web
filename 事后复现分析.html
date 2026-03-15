@@ -615,7 +615,7 @@
                 const dispatchTasks = ref([]);
                 const isGeneratingDispatch = ref(false);
                 // Use a stable seekable source first; processed video may be actively written by backend.
-                const VIDEO_CANDIDATES = ['assets/source_video.mp4', 'assets/processed_video.mp4'];
+                const VIDEO_CANDIDATES = ['https://api.jxzj-tech.cn/assets/source_video.mp4', 'https://api.jxzj-tech.cn/assets/processed_video.mp4'];
                 const analysisVideoIndex = ref(0);
                 const analysisVideoSrc = ref(`${VIDEO_CANDIDATES[0]}?t=${Date.now()}`);
                 let seekVerifyTimer = null;
